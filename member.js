@@ -1,9 +1,13 @@
-function skillsMemmber() {
-    var skills = ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python', 'Django'];
-    var member = {
-        name: 'Sergey',
-        age: 30,
-        skills: skills
+function skillsMember() {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/components/members/skills-member.html',
+        controller: 'SkillsMemberController',
+        controllerAs: 'vm',
+        bindToController: true,
+        scope: {
+            member: '=',
+            skills: '='
+        }
     };
-    return member.skills[3];
 }
